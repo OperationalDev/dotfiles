@@ -12,6 +12,6 @@ template "#{ENV['HOME']}/.chef/knife.rb" do
   mode 0600
 end
 
-template "#{ENV['HOME']}/.dotfiles/chef" do
+template "#{ENV['HOME']}/.secrets/chef" do
   action :create_if_missing
 end
