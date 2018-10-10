@@ -1,0 +1,11 @@
+knife[:chef_repo_path] = "#{ENV['HOME']}/.chef"
+knife[:vault_mode] = 'client'
+knife[:editor] = "/usr/bin/vim"
+
+current_dir = File.dirname(__FILE__)
+log_level                :info
+log_location             STDOUT
+node_name                "#{ENV['CHEF_USER']}"
+client_key               "#{knife[:chef_repo_path]}/#{ENV['CHEF_USER']}.pem"
+chef_server_url          "#{ENV['CHEF_SERVER']}"
+cookbook_path            ["~/Cookbooks"]
