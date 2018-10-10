@@ -8,4 +8,4 @@ log_location             STDOUT
 node_name                "#{ENV['CHEF_USER']}"
 client_key               "#{knife[:chef_repo_path]}/#{ENV['CHEF_USER']}.pem"
 chef_server_url          "#{ENV['CHEF_SERVER']}"
-cookbook_path            ["~/Cookbooks"]
+cookbook_path            ["~/Cookbooks","~/Cookbooks/mac-cookbooks"]
