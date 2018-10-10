@@ -16,7 +16,7 @@ end
   end
 end
 
-['alias','export','path'].each do |temp|
+['alias','export','00path'].each do |temp|
   template "#{ENV['HOME']}/.dotfiles/#{temp}"
 end
 
