@@ -1,0 +1,8 @@
+export TF_VAR_CHEF_USER="<%= node['chef']['user'] %>"
+export TF_VAR_CHEF_KEY="$HOME/<%= node['chef']['user'] %>.pem"
+export TF_VAR_VR_USERNAME="<%= node['dotfiles']['ad']['user'] %>"
+export TF_VAR_VS_USERNAME="<%= node['dotfiles']['ad']['domain'] %>\\<%= node['dotfiles']['ad']['user'] %>"
+export TF_VAR_VR_PASSWORD=`cat $HOME/.secrets/ad`
+export CONSUL_HTTP_TOKEN=`cat $HOME/.secrets/consul`
+export CONSUL_HTTP_ADDR="<%= node['dotfiles']['consul']['server'] %>"
+export VAULT_ADDR="<%= node['dotfiles']['vault']['server'] %>"

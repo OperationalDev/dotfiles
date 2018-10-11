@@ -6,6 +6,6 @@ current_dir = File.dirname(__FILE__)
 log_level                :info
 log_location             STDOUT
 node_name                "<%= node['chef']['user'] %>"
-client_key               "#{ENV['HOME']}/<%= node['chef']['user'] %>.pem"
+client_key               "#{ENV['HOME']}/.chef/<%= node['chef']['user'] %>.pem"
 chef_server_url          "<%= node['chef']['server'] %>"
 cookbook_path            [<%= node['chef']['cookbook_paths'].map {|path| "\"#{path}\""}.join(', ') %>]
