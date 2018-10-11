@@ -6,12 +6,12 @@
 
 directory "#{ENV['HOME']}/.chef" do
   mode 0700
+  owner node['dotfiles']['user']
+  group node['dotfiles']['group']
 end
 
 template "#{ENV['HOME']}/.chef/knife.rb" do
   mode 0600
-end
-
-template "#{ENV['HOME']}/.secrets/chef" do
-  action :create_if_missing
+  owner node['dotfiles']['user']
+  group node['dotfiles']['group']
 end

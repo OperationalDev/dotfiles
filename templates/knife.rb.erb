@@ -5,7 +5,7 @@ knife[:editor] = "/usr/bin/vim"
 current_dir = File.dirname(__FILE__)
 log_level                :info
 log_location             STDOUT
-node_name                "#{ENV['CHEF_USER']}"
-client_key               "#{knife[:chef_repo_path]}/#{ENV['CHEF_USER']}.pem"
-chef_server_url          "#{ENV['CHEF_SERVER']}"
-cookbook_path            ENV['CHEF_COOKBOOK_PATHS'].split(',')
+node_name                "<%= node['chef']['user'] %>"
+client_key               "<%= node['chef']['user'] %>.pem"
+chef_server_url          "<%= node['chef']['server'] %>"
+cookbook_path            [<%= node['chef']['cookbook_paths'].map {|path| "\"#{path}\""}.join(', ') %>]
