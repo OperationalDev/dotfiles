@@ -1,4 +1,5 @@
 source "$HOME/.secrets/proxy"
 
+alias chef-client-solo="chef-client --minimal-ohai -z -o"
 alias proxy_on="export http_proxy=$MYPROXY;export https_proxy=$MYPROXY"
 alias proxy_off="unset http_proxy;unset https_proxy"
